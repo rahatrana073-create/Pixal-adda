@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelAdda | Gaming Community</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#">✳ Pixel<span>Adda</span></a>
+    <nav><a href="#feed">Discover</a><a href="#community">Community</a></nav>
+    <button id="userBtn" class="outline">Join community</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">A LITTLE SPACE FOR BIG GAME MOMENTS</p>
+        <h1>Find your <em>people.</em><br>Share your play.</h1>
+        <p class="intro">A friendly corner to trade tips, celebrate wins and talk about the games you love.</p>
+        <a class="button dark" href="#feed">Explore discussions ↗</a>
+      </div>
+      <div class="hero-art"><span class="spark">✦</span><div class="controller">🎮</div><b>PLAY · POST · CONNECT</b></div>
+    </section>
+
+    <section class="stats" id="community">
+      <div><strong id="postCount">0</strong><span>discussions</span></div>
+      <div><strong id="memberCount">0</strong><span>players</span></div>
+      <div><strong>04</strong><span>game corners</span></div>
+    </section>
+
+    <section class="feed" id="feed">
+      <div class="heading">
+        <div><p class="eyebrow">THE COMMUNITY BOARD</p><h2>What's the <em>talk?</em></h2></div>
+        <button class="button coral" id="newPost">＋ Start a discussion</button>
+      </div>
+      <div class="tools">
+        <input id="search" type="search" placeholder="Search discussions...">
+        <select id="category"><option>All</option><option>Minecraft</option><option>Valorant</option><option>BGMI</option><option>Other</option></select>
+        <select id="sort"><option value="new">Newest first</option><option value="popular">Most liked</option></select>
+      </div>
+      <div class="columns">
+        <div><div class="feed-label">RECENT DISCUSSIONS <span id="resultCount"></span></div><div id="posts" class="posts"></div></div>
+        <aside>
+          <div class="side-card"><span class="side-symbol">✳</span><p class="eyebrow">YOU BELONG HERE</p><h3>Good players.<br>Better people.</h3><p>Keep it kind, share what you know and make room for new players.</p><hr><p>01 · Be respectful<br>02 · Give helpful tips<br>03 · Have fun</p></div>
+          <div class="side-card peach"><p class="eyebrow">TODAY'S QUESTION</p><h3>One game to replay forever?</h3><p>Drop your answer in a new discussion.</p></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>✳ Pixel<span>Adda</span><small>Made for gamers, by gamers · Student project</small></footer>
+
+  <dialog id="postModal">
+    <form id="postForm">
+      <div class="modal-head"><h2>Start a discussion</h2><button type="button" id="closeModal">×</button></div>
+      <label>Gamer name<input id="postUser" maxlength="24" required></label>
+      <label>Title<input id="title" maxlength="80" placeholder="Give your post a title..." required></label>
+      <label>Game<select id="game"><option>Minecraft</option><option>Valorant</option><option>BGMI</option><option>Other</option></select></label>
+      <label>Message<textarea id="message" rows="4" maxlength="500" placeholder="Share your thoughts..." required></textarea></label>
+      <button class="button dark" type="submit">Publish post ↗</button>
+    </form>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
